@@ -1,0 +1,396 @@
+.contact-section {
+  padding: 100px 0;
+  background: #fff;
+  color: #333;
+}
+
+/* Contact Cards Wrapper - Vertical Stack */
+.contact-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 25px 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  flex: 1;
+}
+
+.contact-card:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #ff6b6b;
+}
+
+.contact-card h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-card p a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-card p a:hover {
+  color: #ff6b6b;
+}
+
+.social-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Google Map Styles */
+.map-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.map-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+.google-map-wrapper {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.google-map-wrapper iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  display: block;
+}
+
+.map-note {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.map-note i {
+  margin-right: 5px;
+  color: #ff6b6b;
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ff6b6b, #ff6b9d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.form-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.form-message.warning {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.form-message a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.form-message i {
+  font-size: 16px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-cards-wrapper {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .contact-card {
+    margin-bottom: 0;
+    padding: 20px 12px;
+  }
+
+  .contact-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .contact-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contact-card p {
+    font-size: 13px;
+  }
+
+  .contact-form-container {
+    padding: 30px 25px;
+  }
+
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .social-title {
+    font-size: 24px;
+  }
+
+  .map-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .google-map-wrapper iframe {
+    height: 350px;
+  }
+}
+
+/* iPhone SE and small phones */
+@media (max-width: 375px) {
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  .contact-cards-wrapper {
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .contact-card {
+    padding: 20px 12px;
+    margin-bottom: 0;
+  }
+
+  .contact-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .contact-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .contact-card p {
+    font-size: 12px;
+  }
+
+  .contact-form-container {
+    padding: 25px 20px;
+  }
+
+  .form-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .social-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .map-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .google-map-wrapper iframe {
+    height: 300px;
+  }
+
+  .map-note {
+    font-size: 12px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .contact-cards-wrapper {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .contact-card {
+    padding: 18px 10px;
+  }
+
+  .contact-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .contact-card h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .contact-card p {
+    font-size: 11px;
+  }
+
+  .contact-form-container {
+    padding: 20px 15px;
+  }
+
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .btn-submit {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

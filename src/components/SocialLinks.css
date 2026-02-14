@@ -1,0 +1,63 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: linear-gradient(135deg, #ff6b6b, #ff6b9d);
+  transform: translateY(-3px);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.social-link i {
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+  transform: scale(1.2);
+}
+
+/* iPhone SE and small phones */
+@media (max-width: 375px) {
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .social-links {
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}

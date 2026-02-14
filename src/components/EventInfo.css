@@ -1,0 +1,62 @@
+.event-info-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #ffe66d 100%);
+  color: #fff;
+}
+
+.event-date {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.event-location {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .event-info-section {
+    padding: 50px 0;
+  }
+
+  .event-date {
+    font-size: 36px;
+  }
+
+  .event-location {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+}
+
+/* iPhone SE and small phones */
+@media (max-width: 375px) {
+  .event-info-section {
+    padding: 40px 0;
+  }
+
+  .event-date {
+    font-size: 28px;
+    padding: 0 15px;
+  }
+
+  .event-location {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .event-date {
+    font-size: 24px;
+  }
+
+  .event-location {
+    font-size: 14px;
+  }
+}
