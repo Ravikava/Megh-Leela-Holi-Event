@@ -64,7 +64,7 @@ const BookingSection = () => {
       },
       {
         "pass_type": "general",
-        "person": "group_of_6",
+        "person": "group_of_6_persons",
         "price": "4500",
         "includes" : [
           "Entry",
@@ -76,7 +76,7 @@ const BookingSection = () => {
       },
       {
         "pass_type": "general",
-        "person": "group_of_10",
+        "person": "group_of_10_persons",
         "price": "7000",
         "includes" : [
           "Entry",
@@ -103,7 +103,7 @@ const BookingSection = () => {
       },
       {
         "pass_type": "premium",
-        "person": "group_of_6",
+        "person": "group_of_6_persons",
         "price": "8400",
         "includes" : [
           "Fast Entry",
@@ -115,7 +115,7 @@ const BookingSection = () => {
       },
       {
         "pass_type": "premium",
-        "person": "group_of_10",
+        "person": "group_of_10_persons",
         "price": "13000",
         "includes" : [
           "Fast Entry",
