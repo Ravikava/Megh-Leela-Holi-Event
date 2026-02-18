@@ -16,8 +16,8 @@ const Footer = () => {
           <div className="col-lg-4 col-md-6 mb-4">
             <h5>Contact Info</h5>
             <address>
-              <p><i className="fa fa-map-marker"></i> next to Utkantheshwar Mahadev Village, Punadra, Gujarat 387610</p>
-              <p><i className="fa fa-phone"></i> <a href="tel:+919873983824">+91 98739 83824</a></p>
+              <p><i className="fa fa-map-marker"></i>Serenity Circles By Bhagwat next to Utkantheshwar Mahadev Village, Punadra, Gujarat 387610</p>
+              <p><i className="fa fa-phone"></i> <a href="tel:+919313204312">+91 93132 04312</a></p>
               <p><i className="fa fa-envelope"></i> <a href="mailto:meghleela.fourace@gmail.com">meghleela.fourace@gmail.com</a></p>
             </address>
           </div>

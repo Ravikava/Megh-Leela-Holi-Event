@@ -1,18 +1,7 @@
-.booking-section {
+.ticket-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, rgba(248, 249, 250, 0.85) 0%, rgba(233, 236, 239, 0.85) 100%),
-              url('/images/Booking Cover.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #fff;
   color: #333;
-  position: relative;
-}
-
-.booking-section .container {
-  position: relative;
-  z-index: 1;
 }
 
 .section-label {
@@ -44,42 +33,12 @@
   margin: 0 auto 30px;
 }
 
-.booking-description {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.7);
-  margin-bottom: 60px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
-}
-
-.ticket-arenas {
-  margin-top: 60px;
-}
-
-.arena-section {
-  margin-bottom: 60px;
-}
-
-.arena-section:last-child {
-  margin-bottom: 0;
-}
-
-.arena-title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 30px;
-  text-align: center;
-  text-transform: capitalize;
-}
-
 .ticket-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 60px;
+  padding: 0 20px;
 }
 
 .ticket-card {
@@ -214,64 +173,6 @@
   text-transform: capitalize;
 }
 
-.ticket-includes {
-  margin: 10px 0;
-}
-
-.includes-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #ff6b6b;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  text-align: left;
-}
-
-.includes-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.includes-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 8px 0;
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-}
-
-.check-icon {
-  color: #4ecdc4;
-  font-weight: 900;
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  filter: drop-shadow(0 1px 2px rgba(78, 205, 196, 0.3));
-}
-
-.includes-text {
-  flex: 1;
-  color: #333;
-  font-weight: 500;
-}
-
-.ticket-card:hover .includes-item {
-  color: #333;
-}
-
-.ticket-card:hover .check-icon {
-  color: #ff6b6b;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
 .ticket-price-section {
   text-align: center;
   padding: 20px;
@@ -332,11 +233,10 @@
 
 .ticket-card-footer {
   padding: 18px 20px;
-  background: #fff;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-top: 2px solid #f0f0f0;
 }
 
 .ticket-card-footer::before {
@@ -346,7 +246,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
@@ -355,10 +255,7 @@
 }
 
 .book-now-text {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff6b9d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -375,9 +272,8 @@
 
 /* Tablet */
 @media (max-width: 768px) {
-  .booking-section {
+  .ticket-section {
     padding: 60px 0;
-    background-attachment: scroll; /* Disable fixed on mobile for better performance */
   }
 
   .section-title {
@@ -385,21 +281,11 @@
     padding: 0 20px;
   }
 
-  .booking-description {
-    font-size: 16px;
-    padding: 0 30px;
-    margin-bottom: 40px;
-  }
-
-  .arena-title {
-    font-size: 28px;
-    padding: 0 20px;
-  }
-
   .ticket-cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     padding: 0 15px;
+    margin-top: 40px;
   }
 
   .ticket-title {
@@ -419,24 +305,6 @@
     font-size: 15px;
   }
 
-  .includes-title {
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-
-  .includes-item {
-    font-size: 13px;
-    gap: 8px;
-  }
-
-  .check-icon {
-    font-size: 14px;
-  }
-
-  .includes-text {
-    font-size: 13px;
-  }
-
   .price-amount {
     font-size: 36px;
   }
@@ -444,21 +312,12 @@
   .price-free {
     font-size: 32px;
   }
-
-  .ticket-arenas {
-    margin-top: 40px;
-  }
-
-  .arena-section {
-    margin-bottom: 40px;
-  }
 }
 
 /* iPhone SE and small phones */
 @media (max-width: 375px) {
-  .booking-section {
+  .ticket-section {
     padding: 50px 0;
-    background-attachment: scroll; /* Disable fixed on mobile for better performance */
   }
 
   .section-label {
@@ -472,23 +331,11 @@
     margin-bottom: 15px;
   }
 
-  .booking-description {
-    font-size: 14px;
-    padding: 0 20px;
-    margin-bottom: 30px;
-  }
-
-  .arena-title {
-    font-size: 24px;
-    padding: 0 15px;
-    margin-bottom: 20px;
-  }
-
   .ticket-cards-grid {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 10px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .ticket-card-header {
@@ -518,25 +365,6 @@
     font-size: 14px;
   }
 
-  .includes-title {
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-
-  .includes-item {
-    font-size: 12px;
-    gap: 8px;
-    padding: 6px 0;
-  }
-
-  .check-icon {
-    font-size: 13px;
-  }
-
-  .includes-text {
-    font-size: 12px;
-  }
-
   .ticket-price-section {
     padding: 15px;
   }
@@ -560,28 +388,12 @@
   .book-now-text {
     font-size: 14px;
   }
-
-  .ticket-arenas {
-    margin-top: 30px;
-  }
-
-  .arena-section {
-    margin-bottom: 30px;
-  }
 }
 
 /* Very small screens */
 @media (max-width: 320px) {
   .section-title {
     font-size: 24px;
-  }
-
-  .booking-description {
-    font-size: 13px;
-  }
-
-  .arena-title {
-    font-size: 20px;
   }
 
   .ticket-cards-grid {
@@ -610,25 +422,6 @@
     font-size: 13px;
   }
 
-  .includes-title {
-    font-size: 11px;
-    margin-bottom: 6px;
-  }
-
-  .includes-item {
-    font-size: 11px;
-    gap: 6px;
-    padding: 5px 0;
-  }
-
-  .check-icon {
-    font-size: 12px;
-  }
-
-  .includes-text {
-    font-size: 11px;
-  }
-
   .ticket-price-section {
     padding: 12px;
   }
@@ -653,3 +446,4 @@
     font-size: 13px;
   }
 }
+

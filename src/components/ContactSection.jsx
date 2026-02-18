@@ -103,7 +103,7 @@ const ContactSection = () => {
                   <i className="fa fa-map-marker"></i>
                 </div>
                 <h4>Location</h4>
-                <p>next to Utkantheshwar Mahadev Village, Punadra, Gujarat 387610</p>
+                <p>Serenity Circles By Bhagwat next to Utkantheshwar Mahadev Village, Punadra, Gujarat 387610</p>
               </motion.div>
 
               <motion.div
@@ -117,7 +117,7 @@ const ContactSection = () => {
                   <i className="fa fa-phone"></i>
                 </div>
                 <h4>Phone</h4>
-                <p><a href="tel:+919873983824">+91 98739 83824</a></p>
+                <p><a href="tel:+919313204312">+91 93132 04312</a></p>
               </motion.div>
 
               <motion.div
