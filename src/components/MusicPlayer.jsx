@@ -4,10 +4,27 @@ import './MusicPlayer.css';
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [currentSong, setCurrentSong] = useState(null);
   const audioRef = useRef(null);
+
+  // List of available music files
+  const musicFiles = [
+    '/music/disco-kana.mp3',
+    '/music/gangstas.mp3',
+    '/music/radha-govaldi.mp3',
+    '/music/thakar-kare.mp3'
+  ];
+
+  // Select a random song on component mount
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * musicFiles.length);
+    setCurrentSong(musicFiles[randomIndex]);
+  }, []); // Empty dependency array - only run on mount
 
   // Try to play music immediately on page load (may be blocked by browser)
   useEffect(() => {
+    if (!currentSong) return; // Wait for song to be selected
+
     const tryAutoPlay = async () => {
       if (audioRef.current && !hasInteracted) {
         try {
@@ -34,11 +51,18 @@ const MusicPlayer = () => {
     return () => {
       timers.forEach(timer => clearTimeout(timer));
     };
-  }, [hasInteracted]);
+  }, [hasInteracted, currentSong]);
 
   // Try to play music when user first interacts with the page
+  // Note: Browsers require a direct user interaction (click/touch) for audio playback
   useEffect(() => {
-    const handleFirstInteraction = async () => {
+    const handleFirstInteraction = async (event) => {
+      // Only allow direct user interactions (click, touch, keydown) - not scroll
+      const allowedEvents = ['click', 'touchstart', 'keydown', 'mousedown', 'pointerdown'];
+      if (!allowedEvents.includes(event.type) && !hasInteracted) {
+        return;
+      }
+
       if (!hasInteracted && audioRef.current) {
         try {
           // Ensure audio is loaded
@@ -54,31 +78,38 @@ const MusicPlayer = () => {
           setHasInteracted(true);
           
           // Remove all listeners once playing successfully
-          events.forEach(event => {
-            document.removeEventListener(event, handleFirstInteraction);
+          allEvents.forEach(eventName => {
+            document.removeEventListener(eventName, handleFirstInteraction);
           });
           window.removeEventListener('focus', handleFirstInteraction);
         } catch (error) {
-          // Keep trying on next interaction
-          console.log('Play failed, will retry on next interaction:', error);
+          // Keep trying on next valid interaction
+          // Don't log every failed attempt to avoid console spam
         }
       }
     };
 
-    // Listen for any user interaction - removed 'once: true' so it keeps trying
-    const events = [
+    // Listen for direct user interactions (click, touch, key press)
+    // These are the events browsers accept for audio playback
+    const directInteractionEvents = [
       'click', 
       'touchstart', 
       'keydown', 
-      'scroll', 
-      'mousemove',
-      'pointerdown',
-      'pointermove',
-      'wheel',
-      'mousedown'
+      'mousedown',
+      'pointerdown'
     ];
     
-    events.forEach(event => {
+    // Also listen to scroll/move to show that interaction is happening
+    // but these won't trigger audio (browser restriction)
+    const allEvents = [
+      ...directInteractionEvents,
+      'scroll',
+      'mousemove',
+      'pointermove',
+      'wheel'
+    ];
+    
+    allEvents.forEach(event => {
       document.addEventListener(event, handleFirstInteraction, { passive: true });
     });
     
@@ -86,7 +117,7 @@ const MusicPlayer = () => {
     window.addEventListener('focus', handleFirstInteraction);
 
     return () => {
-      events.forEach(event => {
+      allEvents.forEach(event => {
         document.removeEventListener(event, handleFirstInteraction);
       });
       window.removeEventListener('focus', handleFirstInteraction);
@@ -111,19 +142,27 @@ const MusicPlayer = () => {
     }
   };
 
+  // Don't render until a song is selected
+  if (!currentSong) {
+    return null;
+  }
+
   return (
     <div className="music-player">
       <audio
         ref={audioRef}
         loop
         preload="auto"
+        key={currentSong} // Force reload when song changes
       >
-        <source src="/music/background-music.mp3" type="audio/mpeg" />
-        <source src="/music/background-music.ogg" type="audio/ogg" />
+        <source src={currentSong} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
+      {!hasInteracted && (
+        <div className="music-prompt">Click to play music</div>
+      )}
       <button
-        className={`music-toggle-btn ${isPlaying ? 'playing' : ''}`}
+        className={`music-toggle-btn ${isPlaying ? 'playing' : ''} ${!hasInteracted ? 'pulsing' : ''}`}
         onClick={togglePlay}
         aria-label={isPlaying ? 'Pause music' : 'Play music'}
         title={isPlaying ? 'Pause music' : 'Play music'}
