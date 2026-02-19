@@ -5,6 +5,7 @@ import Gallery from './components/Gallery';
 import BookingSection from './components/BookingSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import MusicPlayer from './components/MusicPlayer';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <BookingSection />
       <ContactSection />
       <Footer />
+      <MusicPlayer />
     </div>
   );
 }
