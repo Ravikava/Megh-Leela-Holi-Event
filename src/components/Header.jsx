@@ -1,31 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
-      if (heroSection) {
-        const heroHeight = heroSection.offsetHeight;
-        const scrollPosition = window.scrollY;
-        // Check if scrolled past half of hero section
-        setIsScrolled(scrollPosition > heroHeight / 2);
-      }
-    };
-
-    // Check on mount
-    handleScroll();
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -37,7 +14,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`header ${isScrolled ? 'scrolled' : 'transparent'} ${isMenuOpen ? 'menu-open' : ''}`}>
+      <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -59,7 +36,7 @@ const Header = () => {
                     {/* Book Now in Mobile Menu */}
                     <li className="mobile-book-now">
                       <a 
-                        href="https://in.bookmyshow.com/" 
+                        href="https://app.wowsly.com/e/2281/meghleela-the-vrindavan-edition" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="btn-book-now-mobile"
@@ -82,7 +59,7 @@ const Header = () => {
                 {/* Book Now Button - Right Side (Desktop Only) */}
                 <div className="header-actions">
                   <a 
-                    href="https://in.bookmyshow.com/" 
+                    href="https://app.wowsly.com/e/2281/meghleela-the-vrindavan-edition" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="btn-book-now desktop-only"
@@ -107,7 +84,7 @@ const Header = () => {
 
       {/* Sticky Book Now Button - Mobile Only (Bottom Right) */}
       <a 
-        href="https://in.bookmyshow.com/" 
+        href="https://app.wowsly.com/e/2281/meghleela-the-vrindavan-edition" 
         target="_blank" 
         rel="noopener noreferrer"
         className="btn-book-now-sticky mobile-only"

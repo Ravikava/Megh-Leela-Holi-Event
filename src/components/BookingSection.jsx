@@ -47,7 +47,8 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Maha Raas (Garba)"
+          "Maha Raas (Garba)",
+          "Get a Free Gift Worth ₹2,000"
         ]
       },
       {
@@ -59,7 +60,8 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Maha Raas (Garba)"
+          "Maha Raas (Garba)",
+          "Get a Free Gift Worth ₹5,000"
         ]
       },
       {
@@ -71,7 +73,8 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Maha Raas (Garba)"
+          "Maha Raas (Garba)",
+          "Get a Free Gift Worth ₹20,000"
         ]
       },
       {
@@ -83,7 +86,8 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Maha Raas (Garba)"
+          "Maha Raas (Garba)",
+          "Get a Free Gift Worth ₹50,000"
         ]
       }
     ],
@@ -98,7 +102,8 @@ const BookingSection = () => {
           "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
           "₹200 Food Coupon",
-          "Photo Booth Priority"
+          "Photo Booth Priority",
+          "Get a Free Gift Worth ₹10,000"
         ]
       },
       {
@@ -110,7 +115,8 @@ const BookingSection = () => {
           "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
           "₹200 Food Coupon",
-          "Photo Booth Priority"
+          "Photo Booth Priority",
+          "Get a Free Gift Worth ₹30,000 per group"
         ]
       },
       {
@@ -122,7 +128,8 @@ const BookingSection = () => {
           "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
           "₹200 Food Coupon",
-          "Photo Booth Priority"
+          "Photo Booth Priority",
+          "Get a Free Gift Worth ₹50,000 per group"
         ]
       }
     ],
@@ -136,7 +143,8 @@ const BookingSection = () => {
           "Separate Seating",
           "Premium Food Buffet",
           "2 Complimentary Drinks",
-          "Dedicated Entry Gate"
+          "Dedicated Entry Gate",
+          "Get a Free Gift Worth ₹1,00,000"
         ]
       },
       {
@@ -148,7 +156,8 @@ const BookingSection = () => {
           "Separate Seating",
           "Premium Food Buffet",
           "2 Complimentary Drinks",
-          "Dedicated Entry Gate"
+          "Dedicated Entry Gate",
+          "Get a Free Gift Worth ₹5,00,000 per group"
         ]
       }
     ]
@@ -228,7 +237,9 @@ const BookingSection = () => {
                 {tickets.map((ticket, ticketIndex) => (
                   <motion.a
                     key={`${arenaKey}-${ticketIndex}`}
-                    href="#"
+                    href="https://app.wowsly.com/e/2281/meghleela-the-vrindavan-edition"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="ticket-card"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}

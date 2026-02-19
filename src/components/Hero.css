@@ -7,30 +7,45 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 70px; /* Start below navbar - use margin instead of padding */
+  height: calc(100vh - 70px); /* Adjust height to account for navbar */
 }
 
-.video-background {
+/* Hero Slider Container */
+.hero-slider {
+  position: absolute;
+  top: 0; /* Start from top of hero-section */
+  left: 0;
+  width: 100%;
+  height: 100%; /* Fill entire hero-section */
+  z-index: 1;
+}
+
+/* Hero Slide */
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.video-background video {
+.hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-image {
   width: 100%;
   height: 100%;
+  /* height: calc(100vh - 70px); */
   object-fit: cover;
+  object-position: center;
 }
 
-.video-fallback {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #ffe66d 100%);
-}
-
-.video-overlay {
+/* .video-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,25 +53,52 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
   z-index: 2;
+} */
+
+/* Slide Indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.slide-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.slide-indicators .indicator:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.slide-indicators .indicator.active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 1);
+  width: 30px;
+  border-radius: 6px;
 }
 
 
 .hero-content {
-  position: relative;
+  position: ab;
   z-index: 3;
   width: 100%;
   padding-top: 80px;
 }
 
 /* Hero Content Wrapper with Background Shadow */
-.hero-content-wrapper {
+/* .hero-content-wrapper {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -66,7 +108,7 @@
   display: inline-block;
   max-width: 90%;
   margin: 0 auto;
-}
+} */
 
 .hero-title {
   font-size: 50px;
@@ -85,16 +127,6 @@
   text-shadow: none;
 }
 
-.hero-subtitle {
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: none;
-  padding: 0 20px;
-}
 
 .btn-explore {
   background: linear-gradient(135deg, #ff6b6b, #ff6b9d);
@@ -118,9 +150,17 @@
 /* Tablet */
 @media (max-width: 768px) {
   .hero-section {
+    width: 100%;
     min-height: 500px;
     align-items: flex-end; /* Position content at bottom */
     padding-bottom: 40px;
+    margin-top: 30px; /* Adjust for mobile navbar height */
+    /* height: calc(100vh - 30px); */
+  }
+
+  .hero-slider {
+    top: 0; /* Start from top of hero-section */
+    height: 100%;
   }
 
   .video-overlay {
@@ -128,7 +168,20 @@
   }
 
   .hero-image {
-    object-position: center left; /* Show top/center of image on mobile */
+    object-position: center; /* Show center of image on mobile */
+  }
+
+  .slide-indicators {
+    bottom: 20px;
+  }
+
+  .slide-indicators .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slide-indicators .indicator.active {
+    width: 25px;
   }
 
   .hero-content {
@@ -150,11 +203,6 @@
     padding: 0 20px;
   }
 
-  .hero-subtitle {
-    font-size: 16px;
-    padding: 0 30px;
-  }
-
   .btn-explore {
     padding: 12px 30px;
     font-size: 16px;
@@ -164,10 +212,17 @@
 /* iPhone SE and small phones */
 @media (max-width: 375px) {
   .hero-section {
+    width: 100%;
     min-height: 500px;
-    height: 100vh;
     align-items: flex-end; /* Position content at bottom */
     padding-bottom: 30px;
+    margin-top: 40px; /* Adjust for small mobile navbar height */
+    /* height: calc(100vh - 30px); */
+  }
+
+  .hero-slider {
+    top: 0;
+    height: 100%;
   }
 
   .video-overlay {
@@ -175,7 +230,7 @@
   }
 
   .hero-image {
-    object-position: center left; /* Show top/center of image */
+    object-position: center; /* Show center of image */
   }
 
   .hero-content {
@@ -199,12 +254,6 @@
     line-height: 1.1;
   }
 
-  .hero-subtitle {
-    font-size: 14px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-  }
-
   .btn-explore {
     padding: 10px 25px;
     font-size: 14px;
@@ -214,16 +263,20 @@
 /* Very small screens */
 @media (max-width: 320px) {
   .hero-section {
+    width: 100%;
     align-items: flex-end;
     padding-bottom: 25px;
+    margin-top: 40px; /* Adjust for very small mobile navbar height */
+    height: calc(100vh - 40px);
   }
 
-  .video-overlay {
-    background: rgba(255, 255, 255, 0.02); /* Almost no overlay */
+  .hero-slider {
+    top: 0;
+    height: 100%;
   }
 
-  .hero-image {
-    object-position: center left;
+    .hero-image {
+    object-position: center;
   }
 
   .hero-content-wrapper {
@@ -236,10 +289,6 @@
 
   .hero-title {
     font-size: 28px;
-  }
-
-  .hero-subtitle {
-    font-size: 13px;
   }
 
   .btn-explore {

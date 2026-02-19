@@ -133,7 +133,9 @@ const TicketSection = () => {
               return (
                 <motion.a
                   key={`${arenaKey}-${ticketIndex}`}
-                  href="#"
+                  href="https://app.wowsly.com/e/2281/meghleela-the-vrindavan-edition"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="ticket-card"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
