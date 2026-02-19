@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import './Hero.css';
 
 const Hero = () => {
@@ -42,13 +41,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="hero" className="hero-section">
       <div className="hero-slider">
@@ -63,7 +55,6 @@ const Hero = () => {
               className="hero-image"
               loading="lazy"
             />
-            <div className="video-overlay"></div>
           </div>
         ))}
         {/* Slide Indicators */}
@@ -78,36 +69,6 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      {/* <div className="hero-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <div className="hero-content-wrapper">
-                <motion.h1
-                  className="hero-title"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <span className="id-color">Holi Celebration</span>
-                </motion.h1>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                >
-                  <button 
-                    className="btn-explore"
-                    onClick={() => scrollToSection('gallery')}
-                  >
-                    Explore
-                  </button>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };
