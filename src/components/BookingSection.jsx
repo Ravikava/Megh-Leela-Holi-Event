@@ -18,10 +18,10 @@ const BookingSection = () => {
         "price": "399",
         "includes" : [
           "Entry",
+          "Complimentary Mocktail",
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Complimentary Mocktail",
           "Maha Raas (Garba)"
         ]
       },
@@ -31,10 +31,10 @@ const BookingSection = () => {
         "price": "500",
         "includes" : [
           "Entry",
+          "Complimentary Mocktail",
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Complimentary Mocktail",
           "Maha Raas (Garba)"
         ]
       }
@@ -46,10 +46,10 @@ const BookingSection = () => {
         "price": "789",
         "includes" : [
           "Entry",
+          "Complimentary Mocktail",
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹2,000"
         ]
@@ -60,10 +60,10 @@ const BookingSection = () => {
         "price": "1500",
         "includes" : [
           "Entry",
+          "Complimentary Mocktail",
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹5,000"
         ]
@@ -74,10 +74,10 @@ const BookingSection = () => {
         "price": "4500",
         "includes" : [
           "Entry",
+          "Complimentary Mocktail",
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹20,000"
         ]
@@ -88,10 +88,10 @@ const BookingSection = () => {
         "price": "7000",
         "includes" : [
           "Entry",
+          "Complimentary Mocktail",
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
-          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹50,000"
         ]
@@ -105,10 +105,11 @@ const BookingSection = () => {
         "price": "3000",
         "includes" : [
           "Fast Entry",
-          "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
+          "Near Stage arrangement",
           "₹200 Food Coupon per Couple",
           "Photo Booth Priority",
+          "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹10,000"
         ]
       },
@@ -118,10 +119,11 @@ const BookingSection = () => {
         "price": "8400",
         "includes" : [
           "Fast Entry",
-          "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
+          "Near Stage arrangement",
           "₹200 Food Coupon per Couple",
           "Photo Booth Priority",
+          "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹30,000 per group"
         ]
       },
@@ -131,10 +133,11 @@ const BookingSection = () => {
         "price": "13000",
         "includes" : [
           "Fast Entry",
-          "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
+          "Near Stage arrangement",
           "₹200 Food Coupon per Couple",
           "Photo Booth Priority",
+          "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹50,000 per group"
         ]
       }
@@ -145,10 +148,15 @@ const BookingSection = () => {
         "person": "couple",
         "price": "5000",
         "includes" : [
-          "VIP Seating",
-          "Premium Food",
-          "Complimentary Mocktail",
           "Dedicated Entry Gate",
+          "Complimentary Mocktail",
+          "VIP Seating near Stage",
+          "Organic Colors",
+          "Rain Dance",
+          "Color Blast + Color Cloud",
+          "Premium Food",
+          "Photo Booth Priority",
+          "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹1,00,000"
         ]
       },
@@ -157,10 +165,15 @@ const BookingSection = () => {
         "person": "group_of_5_couple",
         "price": "22000",
         "includes" : [
-          "VIP Seating",
-          "Premium Food",
-          "Complimentary Mocktail",
           "Dedicated Entry Gate",
+          "Complimentary Mocktail",
+          "VIP Seating near Stage",
+          "Organic Colors",
+          "Rain Dance",
+          "Color Blast + Color Cloud",
+          "Premium Food",
+          "Photo Booth Priority",
+          "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹5,00,000 per group"
         ]
       }
