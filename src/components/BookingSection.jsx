@@ -21,6 +21,7 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
+          "Complimentary Mocktail",
           "Maha Raas (Garba)"
         ]
       },
@@ -33,6 +34,7 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
+          "Complimentary Mocktail",
           "Maha Raas (Garba)"
         ]
       }
@@ -47,6 +49,7 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
+          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹2,000"
         ]
@@ -60,6 +63,7 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
+          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹5,000"
         ]
@@ -73,6 +77,7 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
+          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹20,000"
         ]
@@ -86,6 +91,7 @@ const BookingSection = () => {
           "Organic Colors",
           "Rain Dance",
           "Color Blast + Color Cloud",
+          "Complimentary Mocktail",
           "Maha Raas (Garba)",
           "Get a Free Gift Worth ₹50,000"
         ]
@@ -101,7 +107,7 @@ const BookingSection = () => {
           "Fast Entry",
           "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
-          "₹200 Food Coupon",
+          "₹200 Food Coupon per Couple",
           "Photo Booth Priority",
           "Get a Free Gift Worth ₹10,000"
         ]
@@ -114,7 +120,7 @@ const BookingSection = () => {
           "Fast Entry",
           "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
-          "₹200 Food Coupon",
+          "₹200 Food Coupon per Couple",
           "Photo Booth Priority",
           "Get a Free Gift Worth ₹30,000 per group"
         ]
@@ -127,7 +133,7 @@ const BookingSection = () => {
           "Fast Entry",
           "Near Stage Access (Sudarshan Stage)",
           "Complimentary Mocktail",
-          "₹200 Food Coupon",
+          "₹200 Food Coupon per Couple",
           "Photo Booth Priority",
           "Get a Free Gift Worth ₹50,000 per group"
         ]
@@ -139,10 +145,9 @@ const BookingSection = () => {
         "person": "couple",
         "price": "5000",
         "includes" : [
-          "VIP Lounge",
-          "Separate Seating",
-          "Premium Food Buffet",
-          "2 Complimentary Drinks",
+          "VIP Seating",
+          "Premium Food",
+          "Complimentary Mocktail",
           "Dedicated Entry Gate",
           "Get a Free Gift Worth ₹1,00,000"
         ]
@@ -152,10 +157,9 @@ const BookingSection = () => {
         "person": "group_of_5_couple",
         "price": "22000",
         "includes" : [
-          "VIP Lounge",
-          "Separate Seating",
-          "Premium Food Buffet",
-          "2 Complimentary Drinks",
+          "VIP Seating",
+          "Premium Food",
+          "Complimentary Mocktail",
           "Dedicated Entry Gate",
           "Get a Free Gift Worth ₹5,00,000 per group"
         ]
