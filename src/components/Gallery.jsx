@@ -101,7 +101,7 @@ const Gallery = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              Events
+              Past Events
             </motion.h3>
             <div className="gallery-grid past-events-gallery">
               {pastEventImages.map((image, index) => (
